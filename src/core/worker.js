@@ -121,7 +121,7 @@ class WorkerMessageHandler {
       );
     }
 
-    if (typeof PDFJSDev === "undefined" || PDFJSDev.test("GENERIC")) {
+    /*if (typeof PDFJSDev === "undefined" || PDFJSDev.test("GENERIC")) {
       // Fail early, and predictably, rather than having (some) fonts fail to
       // load/render with slightly cryptic error messages in environments where
       // the `{Object, Array}.prototype` has been *incorrectly* extended.
@@ -138,7 +138,7 @@ class WorkerMessageHandler {
       for (const prop in []) {
         throw new Error(buildMsg("Array", prop));
       }
-    }
+    }*/
     const workerHandlerName = docId + "_worker";
     let handler = new MessageHandler(workerHandlerName, docId, port);
 
